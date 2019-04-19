@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql37.mydevil.net
--- Czas generowania: 19 Kwi 2019, 18:29
+-- Czas generowania: 19 Kwi 2019, 21:01
 -- Wersja serwera: 5.7.21-20-log
 -- Wersja PHP: 7.1.12
 
@@ -55,6 +55,21 @@ CREATE TABLE `rpg_adminlogs` (
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `rpg_bans`
+--
+
+CREATE TABLE `rpg_bans` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `serial` text NOT NULL,
+  `time` datetime NOT NULL,
+  `reason` text NOT NULL,
+  `admin` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `rpg_settings`
 --
 
@@ -90,6 +105,12 @@ ALTER TABLE `rpg_adminlogs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `rpg_bans`
+--
+ALTER TABLE `rpg_bans`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `rpg_settings`
 --
 ALTER TABLE `rpg_settings`
@@ -109,6 +130,12 @@ ALTER TABLE `rpg_accounts`
 -- AUTO_INCREMENT dla tabeli `rpg_adminlogs`
 --
 ALTER TABLE `rpg_adminlogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `rpg_bans`
+--
+ALTER TABLE `rpg_bans`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

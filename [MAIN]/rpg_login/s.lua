@@ -61,6 +61,16 @@ addEventHandler("login",getRootElement(),function(plr,login,pass)
 	end)
 end)
 
+
+addEventHandler('onPlayerConnect', root, function(playerNick, playerIP, playerUsername, playerSerial)
+	local result=SQL:query('SELECT * FROM rpg_bans WHERE serial=? AND time>NOW() LIMIT 1;', playerSerial)
+	if #result > 0 then
+		cancelEvent(true,"Zostałeś/aś zbanowany/a na tym serwerze!\nPowód zbanowania:" .. result[1].reason.."\nCzas bana:"..result[1].time.."l")
+	else
+		SQL:query("DELETE FROM rpg_bans WHERE serial=?",playerSerial)
+	end
+end)
+
 addEventHandler("onResourceStart",resourceRoot,function(res)
 	print("=")
 	print("==")
