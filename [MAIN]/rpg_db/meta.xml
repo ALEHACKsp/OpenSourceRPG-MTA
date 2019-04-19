@@ -1,0 +1,8 @@
+﻿<meta>
+
+	<min_mta_version client="1.5.5" server="1.5.5" />
+    <download_priority_group>1</download_priority_group>
+    <script src="functions.luac" type="shared" cache="false"/>
+	<export function="query" type="server"/>
+	<export function="exec" type="server"/>
+</meta>

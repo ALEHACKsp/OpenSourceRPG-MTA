@@ -1,0 +1,39 @@
+<meta>
+	<info name="Vehicle Shader" description="Vehicle Shader Advance OOP" version="1.0.0" type="script" />
+	<oop>true</oop>
+	<min_mta_version client="1.5.5" server="1.5.5" />
+
+	<!-- ################################ Scripts ################################ -->
+	
+	<!-- shared -->
+	<script src="shared/Singleton.lua" type="shared"/>
+	<script src="shared/Class.lua" type="shared"/>
+	<script src="shared/classlib.lua" type="shared"/>
+	<script src="shared/settings.lua" type="shared"/>
+
+	<script src="client/main.lua" type="client"/>
+
+	<!-- client classes -->
+	<script src="client/classes/pearl.lua" type="client"/>
+	<script src="client/classes/gloss.lua" type="client"/>
+	<script src="client/classes/matte.lua" type="client"/>
+	<script src="client/classes/carbon.lua" type="client"/>
+	<script src="client/classes/cameleon.lua" type="client"/>
+
+	<!-- client manager -->
+	<script src="client/manager/shaderManager.lua" type="client"/>
+
+	<!-- Texture -->
+	<file src="res/texture/carbon.png" type="client"/>
+	<file src="res/texture/cube_env256.dds" type="client"/>
+	<file src="res/texture/cubeBlurry.dds" type="client"/>
+	<file src="res/texture/cubeSharp.dds" type="client"/>
+	<file src="res/texture/smallnoise3d.dds" type="client"/>	
+
+	<!-- Fx files -->
+	<file src="res/fx/carbon.fx" type="client"/>
+	<file src="res/fx/cameleon.fx" type="client"/>
+	<file src="res/fx/gloss.fx" type="client"/>
+	<file src="res/fx/matte.fx" type="client"/>
+	<file src="res/fx/pearl.fx" type="client"/>		
+</meta>

@@ -1,0 +1,19 @@
+﻿<meta>
+	<script src="s.lua" type="server"/>
+    <script src="c.lua" type="client" cache="false"/>
+
+   
+
+
+    <file src="files/button.png" />    
+    <file src="files/edit.png" />    
+    <file src="files/info.png" />    
+    
+    <file src="files/tlo.png" />    
+    <file src="files/logo.png" />    
+
+    <file src="files/font.ttf" />       
+    <file src="files/tock.mp3" />       
+    <file src="files/click.mp3" />       
+
+</meta>

@@ -1,0 +1,4 @@
+<map edf:definitions="editor_main">
+    <object id="object (laeroad23) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="5488" doublesided="false" scale="1" dimension="0" posX="1855.2" posY="-1206" posZ="24.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kit_cab_rght) (1)" breakable="true" interior="0" alpha="255" model="2015" doublesided="false" scale="1" dimension="0" posX="2323.7" posY="1476.7" posZ="18.4" rotX="0" rotY="0" rotZ="0"></object>
+</map>

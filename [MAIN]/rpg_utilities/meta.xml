@@ -1,0 +1,16 @@
+<meta>
+	<script src="c.lua" type="client" cache="false" />
+	<script src="s.lua" type="server"  />
+	<export function="reserveID" type="server"/>
+	<export function="doCheckID" type="server"/>
+	<export function="getPlayerByID" type="server"/>
+	<export function="getPlayerID" type="server"/>
+	<export function="getPlayerFromPartialName" type="server"/>
+	<export function="smoothMoveCamera" type="client"/>
+	<export function="scaleScreen" type="client"/>
+	<export function="getZoom" type="client"/>
+	<export function="RGBToHex" type="server"/>
+	<export function="moneyLog" type="server"/>
+<download_priority_group>999</download_priority_group>
+	
+</meta>

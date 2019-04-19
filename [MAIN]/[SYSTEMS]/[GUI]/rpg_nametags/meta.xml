@@ -1,0 +1,8 @@
+<meta>
+	<script src="nametags_c.lua" type="client"/>
+	<file src="chat.png"/>
+	<file src="console.png"/>
+	<file src="bw.png"/>
+	<file src="beer.png"/>
+	<file src="arial.ttf"/>
+</meta>
