@@ -14,8 +14,7 @@ end
 
 function commandLog(plr,cmd,target,text)
     if not text then return end
-    print("test")
-    SQL:query("INSERT INTO rpg_adminlogs (command,admin,target,other) VALUES(?,?,?,?)",cmd,plr,target,text)
+    SQL:query("INSERT INTO rpg_adminlogs (command,admin,target,target_acc_id,other,date) VALUES(?,?,?,?,NOW())",cmd,plr,target,getElementData(getPlayerFromName(target),"p:info").gid,text)
 end
 
 addCommandHandler("skick",function(plr,cmd,target,...)
@@ -101,4 +100,9 @@ addCommandHandler("vc",function(plr,cmd,...)
 		warpPedIntoVehicle(plr,veh)
 		setElementDimension(veh, getElementDimension(plr))
 	end
+end)
+
+
+addEventHandler("onPlayerChangeNick", getRootElement(),function()
+    cancelEvent()
 end)

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql37.mydevil.net
--- Czas generowania: 19 Kwi 2019, 21:01
+-- Czas generowania: 30 Kwi 2019, 21:43
 -- Wersja serwera: 5.7.21-20-log
 -- Wersja PHP: 7.1.12
 
@@ -38,6 +38,13 @@ CREATE TABLE `rpg_accounts` (
   `bankmoney` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `rpg_accounts`
+--
+
+INSERT INTO `rpg_accounts` (`gid`, `name`, `password`, `skin`, `health`, `money`, `bankmoney`) VALUES
+(1, 'Allerek', '', 0, 100, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -49,8 +56,17 @@ CREATE TABLE `rpg_adminlogs` (
   `command` text NOT NULL,
   `admin` text NOT NULL,
   `target` text NOT NULL,
-  `other` text NOT NULL
+  `target_acc_id` mediumint(20) NOT NULL,
+  `other` text NOT NULL,
+  `date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `rpg_adminlogs`
+--
+
+INSERT INTO `rpg_adminlogs` (`id`, `command`, `admin`, `target`, `target_acc_id`, `other`, `date`) VALUES
+(1, 'swarn', 'Allerek', 'Allerek', 1, 'test', '2019-04-20 15:51:28');
 
 -- --------------------------------------------------------
 
@@ -86,7 +102,9 @@ CREATE TABLE `rpg_settings` (
 INSERT INTO `rpg_settings` (`id`, `name`, `value`) VALUES
 (1, 'name', 'OpenSourceRPG'),
 (2, 'devMode', 'true'),
-(3, 'devPass', 'changeme');
+(3, 'devPass', 'changeme'),
+(4, 'forumLink', 'https://virginia-rpg.pl'),
+(5, 'discordLink', 'https://discordapp.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -124,13 +142,13 @@ ALTER TABLE `rpg_settings`
 -- AUTO_INCREMENT dla tabeli `rpg_accounts`
 --
 ALTER TABLE `rpg_accounts`
-  MODIFY `gid` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `gid` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `rpg_adminlogs`
 --
 ALTER TABLE `rpg_adminlogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `rpg_bans`
@@ -142,7 +160,7 @@ ALTER TABLE `rpg_bans`
 -- AUTO_INCREMENT dla tabeli `rpg_settings`
 --
 ALTER TABLE `rpg_settings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
